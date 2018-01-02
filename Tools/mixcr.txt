@@ -1,0 +1,50 @@
+mixcr 
+
+/home/davi/.linuxbrew/Cellar/mixcr/2.1.1-1: 7 files, 7.1M, built in 7 seconds
+
+pipline:
+
+> mixcr align input_R1.fastq input_R2.fastq alignments.vdjca
+
+... Building alignments
+
+> mixcr assemble alignments.vdjca clones.clns
+
+... Assembling clones
+
+> mixcr exportClones --chains IGH clones.clns clones.txt
+
+... Exporting clones to tab-delimited file
+
+
+
+
+
+
+1-Alignement
+./mixcr align --library imgt.201631-4 -r  report.txt  input.fasta output.vdjca
+input : it should be ".fasta" and not ".fa" ;)
+
+1' -Export alignement (convert .vdjca to .txt)
+./mixcr exportAlignments -f -v     input.vdjca     outout.txt
+
+2-Assembling
+./mixcr assemble     -r     report.txt     input.vdjca     output.clns
+
+3-Export Clones
+./mixcr exportClones     --chains IGH     input.clns     out_final.txt
+
+
+
+In order to get the sequence corresponding each cluster or clone we have to use :
+
+https://mixcr.readthedocs.io/en/latest/export.html
+ 
+
+> mixcr assemble --index index_file alignments.vdjca output.clns
+
+> mixcr assemble --index index_file alignments.vdjca output.clns
+
+(cf : Exporting reads aggregated by clones )
+
+

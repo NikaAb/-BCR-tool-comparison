@@ -1,0 +1,31 @@
+Partis
+
+https://github.com/psathyrella/partis
+
+
+
+sudo docker pull psathyrella/partis
+sudo docker run -it -v /:/host psathyrella/partis /bin/bash
+./bin/build.sh
+
+
+Docker containers and images are kinda-sorta like virtual machines, only different, so a few things:
+
+    We use docker run above: this creates a new container from (i.e. a new instance of) the partis image
+    If you exit (ctrl-d or exit) and then do docker run again, that'll create a new container. But most of the time you want to reattach to the one you made before.
+        to reattach to the same container (after detaching with ctrl-p ctrl-q):
+            run docker ps -a (lists all running and stopped containers) to get the right container ID
+            run docker attach <ID>
+        Hence the -it and /bin/bash options we used above for docker run: these allocate a pseudo-tty, keep STDIN open, and run bash instead of the default command, without all of which you can't reattach
+        the Docker docs are good, but googling on stackoverflow is frequently better
+
+
+
+
+2c19fe944d9a  : container ID for clones_juliana
+1592eb790bd0 ===> or maby is this one
+
+
+Annotation with run-viterbi is the algorithm of choice for annotating sequences where the clonal relationship is different i.e. no sequence in the dataset are from the same germinal center, and therefore are not related by having the same naive sequence. Examples of such datasets could be pooled datasets with BCR sequences from many individuals, where clonal relationship cannot be present.
+
+However for many applications sequence data is created unspecifically for a large amount of BCRs and will contain many sequences being from the same germinal center, hence also sharing the same naive sequence. Using this prior knowledge can greatly improve inference of VDJ gene combination and reconstruction of the naive sequence, and therefore when datasets allow for partitioning, the annotations from the partitioning algorithm should be preferred over the run-viterbi results.

@@ -1,0 +1,70 @@
+IMGT-high vquest
+
+http://www.imgt.org/IMGT_vquest/share/textes/index.html
+
+http://www.imgt.org/IMGTindex/IMGTHighV-QUEST.php
+
+
+
+Orphons 
+http://www.imgt.org/IMGTrepertoire/index.php?section=LocusGenes&repertoire=genetable&species=human&group=IGHV&orphon
+IMGT/HighV-QUEST
+
+IMGT/HighV-QUEST[1] (V-QUERy and STandardization) is part of IMGT®, the international ImMunoGeneTics information system® http://www.imgt.org [2].
+
+IMGT/HighV-QUEST is the high-throughput version of IMGT/V-QUEST [3,4] for the analysis of thousands of immunoglobulin (IG) and T cell receptor (TR) rearranged nucleotide sequences (up to 150 000 sequences) per run.
+
+IMGT/HighV-QUEST has been developed by IMGT®, the international ImMunoGeneTics Information System® to answer the problematic of the analysis of the antigen receptor data from Next-Generation Sequencing (NGS).
+
+Note that:
+
+    All IMGT/HighV-QUEST users should be registered in order to be able to use this platform.
+    IMGT/HighV-QUEST works with rearranged V-J and V-D-J sequences and germline V-GENEs, but does not work with germline D-GENEs or J-GENEs.
+    IMGT/HighV-QUEST can optionally analyse sequences with DNA insertions or deletions (which do not respect the IMGT unique numbering).
+    Sequences containing two V domains (as scFv) need to be split (at the level of the linker) prior to IMGT/HighV-QUEST analysis.
+    IMGT/HighV-QUEST does not work with out-of-frame pseudogenes as they cannot be numbered according to the amino acid IMGT unique numbering. You may use BLAST in order to compare your sequence with F+ORF+all P genes and alleles IMGT reference sequences (select for "Database" : "IMGT/GENE-DB reference sequences").
+    IMGT/HighV-QUEST does not work, or will give aberrant results, for too short partial sequences, sequences containing a cluster of V-GENEs, or sequences with too long 5'UTR or 3'UTR. For these sequences, you may use BLAST in order to identify homologous sequences against IMGT/LIGM-DB (select for "Database" : "IMGT/LIGM-DB") .
+
+Once registered and the submission is accepted by IMGT/HighV-QUEST administrator, users can log in into IMGT/HighV-QUEST using their e-mail and the password they selected during the registration. The first page that a user may see after logging in is the Search Page of IMGT/HighV-QUEST.
+
+    IMGT/HighV-QUEST Search page
+    IMGT/HighV-QUEST Documentation
+
+Citing IMGT:
+Lefranc, M.-P. et al., "IMGT®, the international ImMunoGeneTics database®" Nucl. Acids Res, 37, D1006-D1012 (2009); doi:10.1093/nar/gkn838. PMID: 18978023 pdf
+
+Citing IMGT/HighV-QUEST:
+Alamyar, E. et al., IMGT/HighV-QUEST: A High-Throughput System and Web Portal for the Analysis of Rearranged Nucleotide Sequences of Antigen Receptors, JOBIM 2010, Paper 63 (2010). pdf
+Brochet, X. et al., Nucl. Acids Res. 36, W503-508 (2008). PMID: 18503082 pdf
+References:
+[1] Alamyar, E. et al., JOBIM2010, Paper 63 (2010). pdf
+[2] Alamyar, E. et al., Immunome Res. 8:1:2. doi:10.4172/1745-7580.1000056. LIGM:400
+[3] Alamyar, E. et al., In: B. Tait and F. Christiansen (Eds.), Immunogenetics, chap 32, Humana Press, Springer, New York, USA. Methods Mol. Biof. 882:569-604(2012). PMID:22665256 LIGM:404
+[4] Li.S et al., Nat. Commun. 4:2333;2013 doi:10.1038/ncomms3333 openaccess. PMID:23995877 LIGM:419
+[5] Giudicelli V., et al., Autoimmun Infec Dis. 1(1)(2015). doi: 10.16966/aidoa.103. Free Article LIGM:448
+[6] M.-P. Lefranc, et al. IMGT®, the international ImMunoGeneTics information system®. Nucleic Acids Res., 37, 1006-1012 (2015). PMID:18978023 LIGM:349
+[7] Giudicelli, V. et al., Nucl. Acids Res. 32, W435-440 (2004). PMID: 15215425, LIGM:287 pdf
+[8] Brochet, X. et al., Nucl. Acids Res. 36, W503-508 (2008). PMID: 18503082, LIGM:344
+
+
+IMGT clonotype definition and characterization. In the litera-
+ture, clonotypes are defined differently, depending on the
+experiment design (functional specificity) or available data. Thus,
+a clonotype may denote either a complete receptor (e.g., TR
+alpha - beta), or only one of the two chains of the receptor (e.g.,
+TRA or TRB), or one domain (e.g., V-BETA), or the CDR3
+sequence of a domain. Moreover the sequence can be at the
+amino acid (AA) or nucleotide level, and this is rarely specified.
+Therefore, our priority was to define clonotypes and their prop-
+erties, which could be identified and characterized by IMGT/
+HighV-QUEST, unambiguously.
+In IMGT, the clonotype, designated as ‘IMGT clonotype (AA)’,
+is defined by a unique V-(D)-J rearrangement (with IMGT gene
+and allele names determined by IMGT/HighV-QUEST at the
+nucleotide level 21–25 ) and a unique CDR3-IMGT AA (in-frame)
+junction sequence 39–41 . To identify ‘IMGT clonotypes (AA)’ in a
+given IMGT/HighV-QUEST data set, the ‘1 copy’ are filtered to
+select for sequences with in-frame junction, conserved anchors
+104 and 118 ‘C, F’ (‘C’ is 2nd-CYS 104, and ‘F’ is the J-PHE 118 of
+V-BETA) 36–38 and for V and J functional or ORF, and ‘single
+allele’ (for V and J; Supplementary Fig. S1).
