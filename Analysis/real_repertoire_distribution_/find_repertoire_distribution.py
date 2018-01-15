@@ -65,8 +65,9 @@ def write_clone_file(vidjil_clone_output_file):
 ########################################################################						
 def write_output_file(list_to_write,name):
 	f=open(name,"a")
-	for item in list_to_write:	
-		f.write(str(item)+"\t")
+	for item in list_to_write:
+		f.write(str(item))
+		f.write("\t")
 	f.write("\n")
 	f.close()
 	return 0
@@ -79,11 +80,11 @@ def distribution(total_number_read):
 		split=l.split("\t")
 		key=str(split[1])+"_"+str(split[2])
 		if key in dico_clone.keys():
-			dico_clone[key].append(int(split[0]))
+			dico_clone[key].append(int(split[0])/float(total_number_read))
 		else:
-			dico_clone[key]= [int(split[0])]
+			dico_clone[key]= [int(split[0])/float(total_number_read)]
 	for key in dico_clone.keys(): 
-		write_output_file([sum(dico_clone[key])/float(total_number_read)],name_file_2)
+		write_output_file(dico_clone[key],name_file_2)
 	return 0
 	
 ########################################################################
