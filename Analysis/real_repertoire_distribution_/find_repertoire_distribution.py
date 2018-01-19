@@ -53,6 +53,7 @@ def write_clone_file(vidjil_clone_output_file):
 		if l[0]==">":
 			split=l.split("\t")
 			number_of_read=int(split[0].split("--")[2])
+			print number_of_read
 			
 			if len(split)==3:# have a defind V and J
 				total_number_read+=number_of_read 
@@ -60,6 +61,7 @@ def write_clone_file(vidjil_clone_output_file):
 				if "/" in CDR3:
 					CDR3="_"
 			write_output_file([number_of_read,V,J,CDR3],name_file_1)
+	print total_number_read
 	return total_number_read
 		
 ########################################################################						
@@ -82,6 +84,7 @@ def distribution(total_number_read):
 		if key in dico_clone.keys():
 			dico_clone[key].append(int(split[0])/float(total_number_read))
 		else:
+			print int(split[0]),float(total_number_read)
 			dico_clone[key]= [int(split[0])/float(total_number_read)]
 	for key in dico_clone.keys(): 
 		write_output_file(dico_clone[key],name_file_2)

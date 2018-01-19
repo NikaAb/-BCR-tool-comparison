@@ -75,7 +75,7 @@ def make_dico_family(family_file):
 	dico_family={}
 	family=read_output_file(family_file)
 	for l in family:
-		#print l.split("\t")
+		print l.split("\t")
 		group=l.split("\t")[0]
 		seq=l.split("\t")[1].split(" ")
 		#print seq
@@ -119,7 +119,8 @@ def seperate_values(dico_identity,dico_family):
 ########################################################################
 def plot(inter_family,intra_family):
 	plt.hist(inter_family, weights =range(len(inter_family)),  color = 'yellow', edgecolor = 'red', hatch = '/', label = 'interfamily',rwidth = 0.8,align = 'left')
-	plt.hist(intra_family, weights=range(len(intra_family)),color = 'green', edgecolor = 'blue', hatch ='-' , label = 'intrafamily',rwidth = 0.8,alpha = 0.5,align = 'left')
+	#plt.hist(intra_family, weights=range(len(intra_family)),color = 'green', edgecolor = 'blue', hatch ='-' , label = 'intrafamily',rwidth = 0.8,alpha = 0.5,align = 'left')
+	plt.hist(intra_family, weights=range(len(inter_family)),color = 'green', edgecolor = 'blue', hatch ='-' , label = 'intrafamily',rwidth = 0.8,alpha = 0.5,align = 'left')
 	#plt.hist(inter_family, bins = range(10),  color = 'yellow', edgecolor = 'red', hatch = '/', label = 'interfamily',rwidth = 0.8)
 	#plt.hist(intra_family, bins = range(10),color = 'green', edgecolor = 'blue', alpha = 0.5, hatch ='-' , label = 'intrafamily',rwidth = 0.8)
 	plt.ylabel('# sequence pair')
